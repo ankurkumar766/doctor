@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Doctor Appointment System</title>
+
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!-- Marquee URL -->
+
+<div class="marquee">
+<marquee>
+🌐 Visit our website: www.docapp.com |
+Book Appointment Fast | Trusted Doctors | Secure Healthcare Platform
+</marquee>
+</div>
+
+
+<!-- Navbar -->
+
+<div class="navbar">
+
+<div class="logo">🏥 DocApp</div>
+
+<div>
+
+<% if(!role){ %>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+<% } else { %>
+<a href="/dashboard">Dashboard</a>
+<a href="/doctors">Doctors</a>
+<a href="/logout">Logout</a>
+<% } %>
+
+</div>
+
+</div>
+
+
+<!-- Hero -->
+
+<section class="hero">
+
+<h1>Book Doctor Appointments Online</h1>
+
+<p>Easy, Fast and Secure Healthcare Booking System</p>
+
+<div>
+
+<a href="/doctors">
+<button class="btn primary">View Doctors</button>
+</a>
+
+<a href="/register">
+<button class="btn secondary">Get Started</button>
+</a>
+
+</div>
+
+</section>
+
+
+<!-- Features Section -->
+
+<section class="section">
+
+<h2>Why Choose DocApp</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa fa-user-doctor icon"></i>
+<h3>Expert Doctors</h3>
+<p>Highly qualified doctors available anytime</p>
+</div>
+
+<div class="card">
+<i class="fa fa-calendar-check icon"></i>
+<h3>Easy Booking</h3>
+<p>Book appointment in seconds</p>
+</div>
+
+<div class="card">
+<i class="fa fa-clock icon"></i>
+<h3>Save Time</h3>
+<p>No waiting in long queues</p>
+</div>
+
+<div class="card">
+<i class="fa fa-shield icon"></i>
+<h3>Secure Data</h3>
+<p>Your health data is safe and protected</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- About Us -->
+
+<section class="section about">
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg">
+
+</div>
+
+<div class="about-text">
+
+<h2>About DocApp</h2>
+
+<p>
+DocApp is a modern online doctor appointment booking system designed
+to simplify healthcare access for everyone. Our platform connects patients
+with trusted and verified doctors from various specialties.
+We provide fast and secure appointment booking with real-time availability.
+Patients can easily find doctors based on their needs and book instantly.
+Our system helps reduce waiting time and improves healthcare efficiency.
+DocApp ensures complete privacy and security of patient data.
+The platform is mobile-friendly and easy to use for all age groups.
+We aim to make healthcare accessible anytime and anywhere.
+Thousands of users trust our system for their medical needs.
+DocApp is built using modern technology for reliability and speed.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Footer with Contact -->
+
+<footer>
+
+<div class="footer-container">
+
+<div>
+
+<h3>DocApp</h3>
+
+<p>
+Email: support@docapp.com<br>
+Phone: +91 9876543210<br>
+Location: India
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>
+<a href="/">Home</a><br>
+<a href="/doctors">Doctors</a><br>
+<a href="/register">Register</a>
+</p>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<div class="social">
+
+<i class="fab fa-youtube"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 Doctor Appointment System
+</p>
+
+</footer>
+
+
+</body>
+</html>

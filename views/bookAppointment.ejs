@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Book Appointment</title>
+
+<link rel="stylesheet" href="/css/book.css">
+
+</head>
+<body>
+    
+
+
+
+<div class="form-container">
+
+<h2>Book Appointment</h2>
+
+<img src="<%= doctor.image %>" width="100%">
+
+<h3><%= doctor.name %></h3>
+
+<p><%= doctor.specialization %></p>
+
+<form method="POST">
+
+<label>Select Date</label>
+<input type="date" name="date" required>
+
+<label>Select Time</label>
+<input type="time" name="time" required>
+
+<button>Confirm Booking</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

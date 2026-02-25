@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Doctors</title>
+<link rel="stylesheet" href="/css/doctor.css">
+</head>
+<body>
+   
+
+<div class="navbar">
+<h2>🏥 Doctor Appointment System</h2>
+<a href="/add-doctor" class="btn">Add Doctor</a>
+</div>
+
+<div class="container">
+
+<h1>Available Doctors</h1>
+
+<div class="doctor-grid">
+
+<% doctors.forEach(doctor=>{ %>
+
+<div class="card">
+
+<img src="<%= doctor.image %>">
+
+<h3><%= doctor.name %></h3>
+
+<p><%= doctor.specialization %></p>
+
+<p>Experience: <%= doctor.experience %> years</p>
+
+<p>Fees: ₹<%= doctor.fees %></p>
+
+<a href="/book/<%= doctor._id %>">
+<button class="book-btn">Book Appointment</button>
+</a>
+</div>
+
+<% }) %>
+
+</div>
+
+</div>
+
+</body>
+</html>

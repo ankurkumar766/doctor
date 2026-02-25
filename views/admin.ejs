@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="/css/admin.css">
+
+</head>
+<body>
+    
+
+
+
+<div class="navbar">
+
+<h2>Admin Panel</h2>
+
+<a href="/add-doctor" class="btn">Add Doctor</a>
+
+<a href="/logout" class="btn">Logout</a>
+
+</div>
+
+
+<div class="container">
+
+<h2>All Doctors</h2>
+
+<div class="doctor-grid">
+
+<% doctors.forEach(doc=>{ %>
+
+<div class="card">
+
+<img src="<%= doc.image %>">
+
+<h3><%= doc.name %></h3>
+
+<p><%= doc.specialization %></p>
+
+<p>Fees: ₹<%= doc.fees %></p>
+
+<a href="/delete-doctor/<%= doc._id %>">
+
+<button class="book-btn">Delete</button>
+
+</a>
+
+</div>
+
+<% }) %>
+
+</div>
+
+
+<h2>All Appointments</h2>
+
+<div class="doctor-grid">
+
+<% appointments.forEach(app=>{ %>
+
+<div class="card">
+
+<h3>Doctor: <%= app.doctorId.name %></h3>
+
+<p>Patient: <%= app.patientId.name %></p>
+
+<p>Date: <%= app.date %></p>
+
+<p>Time: <%= app.time %></p>
+
+<p>Status: <%= app.status %></p>
+
+</div>
+
+<% }) %>
+
+</div>
+
+</div>
+
+</body>
+</html>

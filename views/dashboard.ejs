@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+<body>
+   
+
+<div class="navbar">
+
+<h2>Patient Dashboard</h2>
+
+<a href="/doctors" class="btn">Book New</a>
+
+<a href="/logout" class="btn">Logout</a>
+
+</div>
+
+
+<div class="container">
+
+<h2>Your Appointments</h2>
+
+<div class="doctor-grid">
+
+<% appointments.forEach(app=>{ %>
+
+<div class="card">
+
+<img src="<%= app.doctorId.image %>">
+
+<h3><%= app.doctorId.name %></h3>
+
+<p><%= app.doctorId.specialization %></p>
+
+<p>Date: <%= app.date %></p>
+
+<p>Time: <%= app.time %></p>
+
+<p>Status: <%= app.status %></p>
+
+</div>
+
+<% }) %>
+
+</div>
+
+</div>
+
+</body>
+</html>

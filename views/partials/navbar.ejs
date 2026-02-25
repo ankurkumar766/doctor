@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+
+<div class="logo">🏥 DocApp</div>
+
+<div>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/doctors">Doctors</a>
+
+<% if(locals.role === "admin"){ %>
+<a href="/admin">Admin</a>
+<% } %>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</div>
+</body>
+</html>
