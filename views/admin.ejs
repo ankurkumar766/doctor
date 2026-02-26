@@ -62,9 +62,15 @@
 
 <div class="card">
 
-<h3>Doctor: <%= app.doctorId.name %></h3>
+<h3>
+Doctor:
+<%= app.doctorId ? app.doctorId.name : "Doctor deleted" %>
+</h3>
 
-<p>Patient: <%= app.patientId.name %></p>
+<p>
+Patient:
+<%= app.patientId ? app.patientId.name : "User deleted" %>
+</p>
 
 <p>Date: <%= app.date %></p>
 
