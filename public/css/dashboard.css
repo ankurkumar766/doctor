@@ -78,7 +78,7 @@ body {
 /* Doctor Image */
 .card img {
     width: 40%;
-    height: 250px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;

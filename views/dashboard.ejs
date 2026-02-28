@@ -31,17 +31,26 @@
 
 <div class="card">
 
-<img src="<%= app.doctorId.image %>">
+<% if(app.doctorId){ %>
 
-<h3><%= app.doctorId.name %></h3>
+    <img src="<%= app.doctorId.image %>">
+    <h3><%= app.doctorId.name %></h3>
 
-<p><%= app.doctorId.specialization %></p>
+<% } else { %>
+
+    <p>Doctor not available</p>
+
+<% } %>
+
+
 
 <p>Date: <%= app.date %></p>
 
 <p>Time: <%= app.time %></p>
 
 <p>Status: <%= app.status %></p>
+
+
 
 </div>
 
