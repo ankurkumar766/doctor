@@ -5,6 +5,11 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
+const authRoutes = require("./routes/auth");
+const doctorRoutes = require("./routes/doctor");
+const appointmentRoutes = require("./routes/appointment");
+const adminRoutes = require("./routes/admin");
+
 const app = express();
 
 // ✅ Use Atlas URI from Render environment
@@ -27,9 +32,32 @@ app.use(session({
     }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
+// ✅ ROUTES AFTER SESSION
+app.use("/", authRoutes);
+app.use("/", doctorRoutes);
+app.use("/", appointmentRoutes);
+app.use("/", adminRoutes);
+app.get("/", (req,res)=>{
+    res.render("home",{role:req.session.role});
+});
+
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log("Server running on port " + port);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
